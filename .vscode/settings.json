@@ -1,4 +1,7 @@
 {
-    "appService.defaultWebAppToDeploy": "/subscriptions/12778d40-0aa3-41af-99d4-45d9494bd6e5/resourceGroups/fastapicreate_group/providers/Microsoft.Web/sites/fastapicreate",
+    "python.analysis.extraPaths": [
+        "./dependencies"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/12778d40-0aa3-41af-99d4-45d9494bd6e5/resourceGroups/staticpaulrg/providers/Microsoft.Web/sites/fastapipaul",
     "appService.deploySubpath": "."
 }
