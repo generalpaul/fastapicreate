@@ -1,8 +1,18 @@
 from fastapi import FastAPI
-import uvicorn
+import models
+from database import engine
+from routers import auth, admin, product, user, product_sub
 
-app=FastAPI()
+app = FastAPI()
+#handler = Mangum(app)
 
-@app.get("/")
-def read_root():
-    return {"message":"haha4"}
+models.Base.metadata.create_all(bind=engine)
+
+
+app.include_router(auth.router)
+
+app.include_router(product.router)
+app.include_router(product_sub.router)
+
+app.include_router(admin.router)
+app.include_router(user.router)
