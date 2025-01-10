@@ -5,6 +5,7 @@ from routers import auth, admin, product, user, product_sub
 
 app = FastAPI()
 
+
 models.Base.metadata.create_all(bind=engine)
 
 
