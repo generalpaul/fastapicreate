@@ -1,10 +1,11 @@
+from mangum import Mangum
 from fastapi import FastAPI
 import models
 from database import engine
 from routers import auth, admin, product, user, product_sub
 
 app = FastAPI()
-
+handler = Mangum(app)
 
 models.Base.metadata.create_all(bind=engine)
 
